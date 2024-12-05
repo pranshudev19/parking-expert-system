@@ -1,0 +1,111 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artificial Intelligence in Web Development</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            width: 80%;
+            max-width: 800px;
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .tab-bar {
+            display: flex;
+            background-color: #333;
+        }
+        .tab-button {
+            flex: 1;
+            padding: 10px;
+            border: none;
+            background-color: #333;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .tab-button:hover {
+            background-color: #555;
+          margin:2px;
+        }
+        .tab-button.active {
+            background-color: #0064d6;
+          margin:2px;
+        }
+        .tab-content {
+            padding: 20px;
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="tab-bar">
+            <button class="tab-button active" onclick="openTab(event, 'text')">Text</button>
+            <button class="tab-button" onclick="openTab(event, 'image')">Image</button>
+            <button class="tab-button" onclick="openTab(event, 'video')">Video</button>
+        </div>
+
+        <div id="text" class="tab-content active">
+            <h2>Artificial Intelligence in Web Development</h2>
+            <p>Artificial Intelligence (AI) is transforming the landscape of web development by enabling smarter, more dynamic websites and applications. With AI, developers can build web platforms that learn from user behavior, improve performance, and provide personalized experiences.</p>
+            <p>Key applications of AI in web development include:</p>
+            <ul>
+                <li>Chatbots for customer service</li>
+                <li>Personalized content and recommendations</li>
+                <li>Voice search optimization</li>
+                <li>Automated testing and debugging</li>
+                <li>Enhanced user experience with predictive analytics</li>
+            </ul>
+        </div>
+
+        <div id="image" class="tab-content">
+            <h2>AI-Powered Web Development</h2>
+            <img style="border-radius:8px; width:760px; height:415px;" src="https://dce0qyjkutl4h.cloudfront.net/wp-content/uploads/2024/07/AI-in-Web.webp" alt="AI in Web Development">
+            <p>This image illustrates how AI enhances web development with automation, user personalization, and intelligent algorithms.</p>
+        </div>
+
+        <div id="video" class="tab-content">
+            <h2>AI and Web Development Video</h2>
+            <iframe style="border-radius:8px;" width="760" height="415" src="https://www.youtube.com/embed/s7QpRgtrEvY?si=-_L4t1ANBmHxYm-H" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <p>This video provides insights into how AI is revolutionizing web development and the future possibilities it holds.</p>
+        </div>
+    </div>
+
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabContent, tabButtons;
+            
+            tabContent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabContent.length; i++) {
+                tabContent[i].classList.remove("active");
+            }
+            
+            tabButtons = document.getElementsByClassName("tab-button");
+            for (i = 0; i < tabButtons.length; i++) {
+                tabButtons[i].classList.remove("active");
+            }
+            
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+    </script>
+</body>
+</html>

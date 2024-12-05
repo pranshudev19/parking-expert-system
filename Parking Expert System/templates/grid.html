@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Parking Block</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Select Your Parking Block</h1>
+        <div class="grid-container">
+            <form action="/select_block" method="post">
+                <div class="parking-grid">
+                    {% for block in blocks %}
+                        <button type="submit" name="block" value="{{ block }}" class="parking-block {% if blocks[block]['status'] == 'occupied' %} occupied {% elif block == selected_block %} selected {% else %} free {% endif %}">
+                            {{ block }}
+                        </button>
+                    {% endfor %}
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parking System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to the Parking System</h1>
+        <div class="form-container">
+            <form action="/reserve" method="get">
+                <button type="submit" class="submit-btn">Reserve a Parking Block</button>
+            </form>
+            <form action="/park" method="post">
+                <div class="input-group">
+                    <label for="name">Enter your name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="input-group">
+                    <label for="vehicle">Enter vehicle type (motorcycle, car, truck):</label>
+                    <input type="text" id="vehicle" name="vehicle" required>
+                </div>
+                <button type="submit" class="submit-btn">Park Vehicle</button>
+            </form>
+            <form action="/exit" method="post">
+                <div class="input-group">
+                    <label for="exit_name">Enter your name to exit:</label>
+                    <input type="text" id="exit_name" name="exit_name" required>
+                </div>
+                <button type="submit" class="submit-btn">Exit and Calculate Fee</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

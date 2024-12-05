@@ -1,0 +1,130 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f7f7f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    display: block;
+}
+
+.input-group input, 
+.input-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.submit-btn {
+    background-color: #28a745;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.submit-btn:hover {
+    background-color: #218838;
+}
+
+.grid-container {
+    display: flex;
+    justify-content: center;
+}
+
+.parking-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.parking-block {
+    width: 100px;
+    height: 100px;
+    font-size: 18px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.free {
+    background-color: #28a745;
+}
+
+.occupied {
+    background-color: #dc3545;
+}
+
+.selected {
+    background-color: #007bff;
+}
+
+.parking-block:hover {
+    filter: brightness(90%);
+}
+
+.results {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #e9f7ef;
+    border: 1px solid #28a745;
+    border-radius: 10px;
+}
+
+.results h2 {
+    margin-bottom: 15px;
+    color: #28a745;
+}
+
+.results p {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
